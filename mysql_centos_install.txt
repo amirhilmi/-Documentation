@@ -1,0 +1,61 @@
+https://www.tecmint.com/install-mysql-on-centos-8/
+==================================================
+
+yum -y install @mysql
+
+Password
+=========
+mysql_root
+mysql_root_123
+
+database name (talent_synergy)
+=============
+db_tsyn_1
+user_tsyn_1
+password : tsyn@123
+
+
+Create new user and db
+======================
+
+mysql -u root -p
+
+create database db_tsyn_1
+
+CREATE USER 'user_tsyn_1'@'localhost' IDENTIFIED BY 'tsyn@123';
+
+GRANT ALL PRIVILEGES ON *.* TO 'user_tsyn_1'@'localhost';
+
+FLUSH PRIVILEGES;
+
+
+SELECT user FROM mysql.user GROUP BY user;
+
+DROP USER 'username'@'localhost';
+
+DROP USER 'user_tsyn_1'@'localhost';
+DROP USER 'user_tsyn_1'@'%';
+
+Logging from HeidiSQL (jadi)
+===========
+
+CREATE USER 'user_tsyn_1'@'%' IDENTIFIED BY 'tsyn@123';
+
+GRANT ALL PRIVILEGES ON *.* TO 'user_tsyn_1'@'%' WITH GRANT OPTION;
+
+
+icore_sql_1_tsyn_1
+===================
+db platform : MySQL
+IP : 103.6.244.37
+Port : 3306
+Username : user_tsyn_1
+password : tsyn@123
+dbName : db_tsyn_1
+
+
+
+
+
+
+

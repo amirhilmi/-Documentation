@@ -1,0 +1,30 @@
+latest version = MongoDB 4.2 Community Edition
+==============================================
+
+sudo yum install -y mongodb-org
+
+
+systemctl start mongod.service 
+
+systemctl enable mongod.service
+
+mongod --version
+
+===official===
+
+sudo systemctl start mongod
+
+sudo systemctl daemon-reload
+
+sudo systemctl status mongod
+
+sudo systemctl enable mongod
+
+mongo
+
+----stop/restart
+
+sudo systemctl stop mongod
+
+sudo systemctl restart mongod
+

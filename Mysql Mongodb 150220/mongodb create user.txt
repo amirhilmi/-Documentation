@@ -1,0 +1,50 @@
+
+Starting Up
+===========
+
+mongo
+
+use admin // use user_tsyn_mongo_1
+
+show users
+show dbs // show databases
+
+use dbm_tsyn_1
+
+db.plc_test.insert({ status: "The Tea Party" })
+
+db.plc_test.find()
+
+
+User Details
+============
+
+talent_synergy db 1
+-------------------
+
+user_tsyn_mongo_1
+password : tsyn@123
+dbname : dbm_tsyn_1
+
+Create db
+=========
+https://www.howtoforge.com/how-to-install-mongodb-on-centos-8/
+
+use dbm_tsyn_1
+
+
+Create User
+===========
+ db.createUser(
+ {
+ user: "user_tsyn_mongo_1",
+ pwd: "tsyn@123",
+ roles: [ { role: "userAdmin", db: "dbm_tsyn_1" } ]
+ }
+ )
+
+
+Remote Loggin
+=============
+
+port: 27017
